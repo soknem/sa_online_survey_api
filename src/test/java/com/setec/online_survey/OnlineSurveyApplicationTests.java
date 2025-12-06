@@ -1,0 +1,13 @@
+package com.setec.online_survey;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class OnlineSurveyApplicationTests {
+
+    @Test
+    void contextLoads() {
+    }
+
+}
