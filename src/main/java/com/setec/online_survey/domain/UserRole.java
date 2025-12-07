@@ -2,6 +2,7 @@ package com.setec.online_survey.domain;
 
 public enum UserRole {
     ROLE_ADMIN,
+    ROLE_USER,
     ROLE_RESPONDENT;
     
     // Optional utility method for easier lookup
