@@ -2,7 +2,7 @@ package com.setec.online_survey.features.survey.dto;
 
 import java.time.LocalDateTime;
 
-public record SurveyRequest (
+public record SurveyResponse(
         Long id,
         String title,
         String description,

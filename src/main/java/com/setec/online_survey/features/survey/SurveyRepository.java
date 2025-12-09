@@ -1,4 +1,11 @@
 package com.setec.online_survey.features.survey;
 
-public interface SurveyRepository {
+import com.setec.online_survey.domain.Survey;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface SurveyRepository extends JpaRepository<Survey,Long> {
+
+    Optional<Survey> findSurveyByUuid(String uuid);
 }

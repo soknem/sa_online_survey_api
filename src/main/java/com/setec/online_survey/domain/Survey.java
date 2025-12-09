@@ -41,7 +41,7 @@ public class Survey extends Auditable {
     private String status;
 
     @Column(nullable = false)
-    private LocalDateTime creationDate;
+    private LocalDateTime startDate;
 
     private LocalDateTime closeDate;
 
