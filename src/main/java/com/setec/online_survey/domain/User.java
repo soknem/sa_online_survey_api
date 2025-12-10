@@ -24,18 +24,25 @@ public class User extends Auditable {
 
     @Column(nullable = false, unique = true, length = 100)
     @Size(max = 100)
-    private String username;
+    private String password;
 
     @Column(nullable = false, unique = true, length = 255)
     @Email
     @Size(max = 255)
     private String email;
 
+    private String uuid;
+
     @Column(length = 100)
     private String firstName;
 
     @Column(length = 100)
     private String lastName;
+
+    private boolean isAccountNonExpired;
+    private boolean isAccountNonLocked;
+    private boolean isCredentialsNonExpired;
+    private Boolean isDeleted;
 
     // --- Role is now an Enum ---
     @Enumerated(EnumType.STRING)
