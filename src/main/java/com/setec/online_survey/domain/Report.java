@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Table(name = "reports")
 @Entity
-public class Report extends Auditable {
+public class Report extends Auditable<String>  {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -21,7 +21,7 @@ import java.util.Set;
        }
 )
 @Entity
-public class ResponseSession extends Auditable {
+public class ResponseSession extends Auditable<String> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

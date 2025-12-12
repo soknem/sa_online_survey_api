@@ -1,24 +1,25 @@
 package com.setec.online_survey.config.jpa;
 
-import lombok.RequiredArgsConstructor;
+import com.setec.online_survey.security.CustomUserDetails;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.data.domain.AuditorAware;
-import org.springframework.stereotype.Component;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Optional;
 
-@Component
-@RequiredArgsConstructor
 public class EntityAuditorAware implements AuditorAware<String> {
-
+    @NotNull
     @Override
     public Optional<String> getCurrentAuditor() {
-//        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-//
-//        if (auth == null || !(auth.getPrincipal() instanceof CustomUserDetails user)) {
-//            return Optional.of("lms");
-//        }
-//
-//        return Optional.of(user.getUsername());
-        return Optional.of("default");
+
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+
+        if (auth == null || !(auth.getPrincipal() instanceof CustomUserDetails user)) {
+            return Optional.of("KHOTIXS");
+        }
+
+        return Optional.of(user.getUsername());
     }
 }

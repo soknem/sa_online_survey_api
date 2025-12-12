@@ -12,7 +12,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Table(name = "options")
 @Entity
-public class Option extends Auditable {
+public class Option extends Auditable<String>  {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

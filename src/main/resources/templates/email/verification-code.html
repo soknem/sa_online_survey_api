@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9fafb;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background-color: #480028;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .header p {
+            margin: 5px 0 0;
+            font-size: 14px;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+            color: #333333;
+        }
+
+        .content p {
+            margin: 0 0 15px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .code {
+            display: inline-block;
+            background-color: #f0f0f0;
+            color: #480028;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 24px;
+            letter-spacing: 4px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            background-color: #f0f0f0;
+            color: #777777;
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+        }
+
+        .help-button {
+            display: inline-block;
+            background-color: #480028;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .help-button:hover {
+            background-color: #5a0034;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Header -->
+    <div class="header">
+        <h1>Verify Your Email</h1>
+        <p>Your verification code is ready!</p>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <p>
+            Enter the following verification code in the app or website to confirm your email:
+        </p>
+        <div class="code" th:text="${verificationCode}">123456</div>
+        <p>
+            If you did not request this, please ignore this email or contact support.
+        </p>
+        <a href="#" class="help-button">Need Help?</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2024 Your Company. All rights reserved.
+    </div>
+</div>
+</body>
+</html>

@@ -12,7 +12,7 @@
     @NoArgsConstructor
     @Table(name = "questions")
     @Entity
-    public class Question extends Auditable {
+    public class Question extends Auditable<String>  {
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)

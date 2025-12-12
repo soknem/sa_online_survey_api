@@ -24,7 +24,7 @@ public class TokenGenerator {
     private String createAccessToken(CustomUserDetails userDetails) {
         Instant now = Instant.now();
         JwtClaimsSet claims = JwtClaimsSet.builder()
-                .issuer("ISTAD-LMS")
+                .issuer("SA_ONLINE_SURVEY")
                 .issuedAt(now)
                 .expiresAt(now.plus(3, ChronoUnit.DAYS)) // you said 3 days
                 .subject(userDetails.getUsername())
@@ -36,7 +36,7 @@ public class TokenGenerator {
     private String createRefreshToken(CustomUserDetails userDetails) {
         Instant now = Instant.now();
         JwtClaimsSet claims = JwtClaimsSet.builder()
-                .issuer("ISTAD-LMS")
+                .issuer("SA_ONLINE_SURVEY")
                 .issuedAt(now)
                 .expiresAt(now.plus(30, ChronoUnit.DAYS)) // usually longer
                 .subject(userDetails.getUsername())

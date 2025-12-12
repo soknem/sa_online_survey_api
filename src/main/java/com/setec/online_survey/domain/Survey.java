@@ -15,7 +15,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Table(name = "surveys")
 @Entity
-public class Survey extends Auditable {
+public class Survey extends Auditable<String>  {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

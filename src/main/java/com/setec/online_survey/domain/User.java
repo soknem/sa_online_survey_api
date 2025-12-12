@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.Set;
 
 @Setter
@@ -16,7 +17,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Table(name = "users")
 @Entity
-public class User extends Auditable {
+public class User extends Auditable<String> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,6 +32,8 @@ public class User extends Auditable {
     @Size(max = 255)
     private String email;
 
+    private LocalDate dateOfBirth;
+
     private String uuid;
 
     @Column(length = 100)
@@ -39,10 +42,12 @@ public class User extends Auditable {
     @Column(length = 100)
     private String lastName;
 
-    private boolean isAccountNonExpired;
-    private boolean isAccountNonLocked;
-    private boolean isCredentialsNonExpired;
-    private Boolean isDeleted;
+    private Boolean emailVerified;
+
+    private boolean isAccountNonExpired = true;
+    private boolean isAccountNonLocked = true;
+    private boolean isCredentialsNonExpired = true;
+    private Boolean isDeleted = false;
 
     // --- Role is now an Enum ---
     @Enumerated(EnumType.STRING)
