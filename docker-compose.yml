@@ -45,8 +45,8 @@ services:
       - ACT_PUBLIC=/keys/access-token-public.key
       - RET_PRIVATE=/keys/refresh-token-private.key
       - RET_PUBLIC=/keys/refresh-token-public.key
-      - MAIL_USERNAME=sokname56@gmail.com
-      - MAIL_PASSWORD=tcps zgvu rnsf klrf
+      - MAIL_USERNAME=p.soknaem@gmail.com
+      - MAIL_PASSWORD=royr ysoq gfae omeq
       - MAIL_HOST=smtp.gmail.com
       - MAIL_HOST_PORT=587
       # These will be read from the .env file on your VM
