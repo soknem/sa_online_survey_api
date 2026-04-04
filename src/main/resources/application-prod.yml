@@ -20,8 +20,10 @@ POST_LOGOUT_REDIRECT_URI: https://sa-api.supersurvey.live
 #RET_PRIVATE: access-refresh-token-keys/refresh-token-private.key
 #RET_PUBLIC: access-refresh-token-keys/refresh-token-public.key
 
-MAIL_USERNAME: sokname56@gmail.com
-MAIL_PASSWORD: tcps zgvu rnsf klrf
+#MAIL_USERNAME: sokname56@gmail.com
+#MAIL_PASSWORD: tcps zgvu rnsf klrf
+MAIL_USERNAME: p.soknaem@gmail.com
+MAIL_PASSWORD: royr ysoq gfae omeq
 MAIL_HOST: smtp.gmail.com
 MAIL_HOST_PORT: 587
 
